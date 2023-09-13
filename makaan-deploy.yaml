@@ -22,19 +22,19 @@ spec:
         - containerPort: 80  # Replace with the port your application listens on
         readinessProbe:
           httpGet:
-            path: /healthz  # Replace with your application's readiness endpoint
+            path: /index.html  # Replace with your application's readiness endpoint
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
         livenessProbe:
           httpGet:
-            path: /healthz  # Replace with your application's liveness endpoint
+            path: /index.html # Replace with your application's liveness endpoint
             port: 80
           initialDelaySeconds: 10
           periodSeconds: 10
         startupProbe:
           httpGet:
-            path: /healthz  # Replace with your application's startup endpoint
+            path: /index.html  # Replace with your application's startup endpoint
             port: 80
           initialDelaySeconds: 15
           periodSeconds: 5
